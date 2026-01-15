@@ -1,190 +1,221 @@
-📘 Basis Data Part 1
-SQL & RDBMS (Lengkap dengan Quiz & Output)
-📌 Pendahuluan
+# 📘 Basis Data Part 1 – SQL & RDBMS
 
-Basis data merupakan komponen inti dalam pengembangan sistem informasi modern. Hampir seluruh aplikasi—baik berbasis web, desktop, maupun mobile—mengandalkan basis data untuk menyimpan dan mengelola data. Oleh karena itu, pemahaman dasar mengenai SQL (Structured Query Language) dan RDBMS (Relational Database Management System) menjadi hal yang sangat penting bagi mahasiswa dan praktisi di bidang Teknologi Informasi.
+> Dokumentasi pembelajaran Basis Data (Part 1)
+>
 
-Blog ini membahas materi Basis Data Part 1, meliputi:
+---
 
-Konsep dasar SQL & RDBMS
+## 📌 Pendahuluan
 
-Tools RDBMS
+Basis data merupakan komponen inti dalam sistem informasi modern. Hampir semua aplikasi—baik web, desktop, maupun mobile—menggunakan basis data untuk menyimpan dan mengelola data. Oleh karena itu, pemahaman dasar mengenai **SQL (Structured Query Language)** dan **RDBMS (Relational Database Management System)** menjadi fondasi penting bagi mahasiswa dan praktisi di bidang Teknologi Informasi.
 
-Operasi dasar SELECT
+Pada Part 1 ini, pembahasan difokuskan pada:
 
-Quiz beserta query dan output yang bisa dicopy
+* Konsep dasar SQL dan RDBMS
+* Tools RDBMS
+* Operasi dasar `SELECT`
+* Quiz beserta **query dan output**
 
-1️⃣ SQL & RDBMS
-1.1 Pengertian SQL
+---
 
-SQL (Structured Query Language) adalah bahasa standar yang digunakan untuk berinteraksi dengan database relasional. SQL digunakan untuk:
+## 1️⃣ SQL & RDBMS
 
-Mengambil data (SELECT)
+### 1.1 Pengertian SQL
 
-Menambahkan data (INSERT)
+**SQL (Structured Query Language)** adalah bahasa standar yang digunakan untuk berkomunikasi dengan database relasional. SQL digunakan untuk:
 
-Memperbarui data (UPDATE)
+* Mengambil data (`SELECT`)
+* Menambahkan data (`INSERT`)
+* Memperbarui data (`UPDATE`)
+* Menghapus data (`DELETE`)
 
-Menghapus data (DELETE)
+### 1.2 Pengertian RDBMS
 
-1.2 Pengertian RDBMS
+**RDBMS (Relational Database Management System)** adalah sistem manajemen basis data yang menyimpan data dalam bentuk tabel (relasi) dan menggunakan SQL sebagai bahasa pengolahannya.
 
-RDBMS (Relational Database Management System) adalah sistem manajemen basis data yang menyimpan data dalam bentuk tabel (relasi) dan menggunakan SQL sebagai bahasa pengolahannya.
+---
 
-2️⃣ Tools RDBMS
+## 2️⃣ Tools RDBMS
 
-Beberapa RDBMS yang umum digunakan:
+Beberapa tools RDBMS yang umum digunakan:
 
-MySQL – Open-source, populer untuk aplikasi web
+1. **MySQL** – Open-source, populer untuk aplikasi web
+2. **PostgreSQL** – Open-source, kuat dalam konsistensi dan integritas data
+3. **Oracle Database** – Proprietary, banyak digunakan di sektor perbankan
+4. **Microsoft SQL Server** – Proprietary, digunakan di perusahaan besar
+5. **SQLite** – Database ringan untuk aplikasi mobile
 
-PostgreSQL – Open-source, fokus pada konsistensi data
+---
 
-Oracle Database – Proprietary, banyak digunakan di perbankan
+## 3️⃣ Operasi Dasar SELECT
 
-Microsoft SQL Server – Proprietary, digunakan di perusahaan besar
+### Contoh Tabel: `ms_produk`
 
-SQLite – Database ringan untuk aplikasi mobile
+| kode_produk | nama_produk           | harga |
+| ----------- | --------------------- | ----- |
+| prod-01     | Kotak Pensil DQLab    | 62500 |
+| prod-02     | Flashdisk DQLab 64 GB | 55000 |
+| prod-03     | Buku Tulis DQLab      | 12000 |
+| prod-04     | Flashdisk DQLab 32 GB | 40000 |
+| prod-05     | Pulpen DQLab          | 8000  |
 
-3️⃣ Operasi Dasar SELECT
-Contoh Tabel: ms_produk
-+------------+---------------------------+-------+
-| kode_produk| nama_produk               | harga |
-+------------+---------------------------+-------+
-| prod-01    | Kotak Pensil DQLab        | 62500 |
-| prod-02    | Flashdisk DQLab 64 GB     | 55000 |
-| prod-03    | Buku Tulis DQLab          | 12000 |
-| prod-04    | Flashdisk DQLab 32 GB     | 40000 |
-| prod-05    | Pulpen DQLab              | 8000  |
-+------------+---------------------------+-------+
+---
 
-3.1 Mengambil Seluruh Kolom
+### 3.1 Mengambil Seluruh Kolom
 
-Query
+**Query**
 
+```sql
 SELECT * FROM ms_produk;
+```
 
+**Output**
 
-Output
+| kode_produk | nama_produk           | harga |
+| ----------- | --------------------- | ----- |
+| prod-01     | Kotak Pensil DQLab    | 62500 |
+| prod-02     | Flashdisk DQLab 64 GB | 55000 |
+| prod-03     | Buku Tulis DQLab      | 12000 |
+| prod-04     | Flashdisk DQLab 32 GB | 40000 |
+| prod-05     | Pulpen DQLab          | 8000  |
 
-+------------+---------------------------+-------+
-| kode_produk| nama_produk               | harga |
-+------------+---------------------------+-------+
-| prod-01    | Kotak Pensil DQLab        | 62500 |
-| prod-02    | Flashdisk DQLab 64 GB     | 55000 |
-| prod-03    | Buku Tulis DQLab          | 12000 |
-| prod-04    | Flashdisk DQLab 32 GB     | 40000 |
-| prod-05    | Pulpen DQLab              | 8000  |
-+------------+---------------------------+-------+
+---
 
-3.2 Mengambil Satu Kolom
+### 3.2 Mengambil Satu Kolom
 
-Query
+**Query**
 
+```sql
 SELECT nama_produk FROM ms_produk;
+```
 
+**Output**
 
-Output
+| nama_produk           |
+| --------------------- |
+| Kotak Pensil DQLab    |
+| Flashdisk DQLab 64 GB |
+| Buku Tulis DQLab      |
+| Flashdisk DQLab 32 GB |
+| Pulpen DQLab          |
 
-+---------------------------+
-| nama_produk               |
-+---------------------------+
-| Kotak Pensil DQLab        |
-| Flashdisk DQLab 64 GB     |
-| Buku Tulis DQLab          |
-| Flashdisk DQLab 32 GB     |
-| Pulpen DQLab              |
-+---------------------------+
+---
 
-3.3 Mengambil Beberapa Kolom
+### 3.3 Mengambil Beberapa Kolom
 
-Query
+**Query**
 
+```sql
 SELECT kode_produk, nama_produk FROM ms_produk;
+```
 
+**Output**
 
-Output
+| kode_produk | nama_produk           |
+| ----------- | --------------------- |
+| prod-01     | Kotak Pensil DQLab    |
+| prod-02     | Flashdisk DQLab 64 GB |
+| prod-03     | Buku Tulis DQLab      |
+| prod-04     | Flashdisk DQLab 32 GB |
+| prod-05     | Pulpen DQLab          |
 
-+------------+---------------------------+
-| kode_produk| nama_produk               |
-+------------+---------------------------+
-| prod-01    | Kotak Pensil DQLab        |
-| prod-02    | Flashdisk DQLab 64 GB     |
-| prod-03    | Buku Tulis DQLab          |
-| prod-04    | Flashdisk DQLab 32 GB     |
-| prod-05    | Pulpen DQLab              |
-+------------+---------------------------+
+---
 
-3.4 Membatasi Jumlah Baris
+### 3.4 Membatasi Jumlah Baris
 
-Query
+**Query**
 
+```sql
 SELECT * FROM ms_produk
 LIMIT 3;
+```
 
+**Output**
 
-Output
+| kode_produk | nama_produk           | harga |
+| ----------- | --------------------- | ----- |
+| prod-01     | Kotak Pensil DQLab    | 62500 |
+| prod-02     | Flashdisk DQLab 64 GB | 55000 |
+| prod-03     | Buku Tulis DQLab      | 12000 |
 
-+------------+---------------------------+-------+
-| kode_produk| nama_produk               | harga |
-+------------+---------------------------+-------+
-| prod-01    | Kotak Pensil DQLab        | 62500 |
-| prod-02    | Flashdisk DQLab 64 GB     | 55000 |
-| prod-03    | Buku Tulis DQLab          | 12000 |
-+------------+---------------------------+-------+
+---
 
-4️⃣ Quiz Basis Data Part 1
-📝 Quiz 1
+## 4️⃣ Quiz Basis Data Part 1
 
-Soal: Ambil seluruh kolom dari tabel ms_produk.
+### 📝 Quiz 1
 
-Query
+**Soal:** Ambil seluruh kolom dari tabel `ms_produk`.
 
+**Query**
+
+```sql
 SELECT * FROM ms_produk;
+```
 
+**Output**
 
-Output
+| kode_produk | nama_produk           | harga |
+| ----------- | --------------------- | ----- |
+| prod-01     | Kotak Pensil DQLab    | 62500 |
+| prod-02     | Flashdisk DQLab 64 GB | 55000 |
+| prod-03     | Buku Tulis DQLab      | 12000 |
+| prod-04     | Flashdisk DQLab 32 GB | 40000 |
+| prod-05     | Pulpen DQLab          | 8000  |
 
-(prod-01 sampai prod-05 seperti pada tabel di atas)
+---
 
-📝 Quiz 2
+### 📝 Quiz 2
 
-Soal: Tampilkan kode_produk dan nama_produk.
+**Soal:** Tampilkan `kode_produk` dan `nama_produk`.
 
-Query
+**Query**
 
+```sql
 SELECT kode_produk, nama_produk FROM ms_produk;
+```
 
+**Output**
 
-Output
+| kode_produk | nama_produk           |
+| ----------- | --------------------- |
+| prod-01     | Kotak Pensil DQLab    |
+| prod-02     | Flashdisk DQLab 64 GB |
+| prod-03     | Buku Tulis DQLab      |
+| prod-04     | Flashdisk DQLab 32 GB |
+| prod-05     | Pulpen DQLab          |
 
-+------------+---------------------------+
-| kode_produk| nama_produk               |
-+------------+---------------------------+
-| prod-01    | Kotak Pensil DQLab        |
-| prod-02    | Flashdisk DQLab 64 GB     |
-| prod-03    | Buku Tulis DQLab          |
-| prod-04    | Flashdisk DQLab 32 GB     |
-| prod-05    | Pulpen DQLab              |
-+------------+---------------------------+
+---
 
-📝 Quiz 3
+### 📝 Quiz 3
 
-Soal: Batasi jumlah data menjadi 3 baris.
+**Soal:** Batasi jumlah data menjadi 3 baris.
 
-Query
+**Query**
 
+```sql
 SELECT * FROM ms_produk
 LIMIT 3;
+```
 
+**Output**
 
-Output
+| kode_produk | nama_produk           | harga |
+| ----------- | --------------------- | ----- |
+| prod-01     | Kotak Pensil DQLab    | 62500 |
+| prod-02     | Flashdisk DQLab 64 GB | 55000 |
+| prod-03     | Buku Tulis DQLab      | 12000 |
 
-+------------+---------------------------+-------+
-| prod-01    | Kotak Pensil DQLab        | 62500 |
-| prod-02    | Flashdisk DQLab 64 GB     | 55000 |
-| prod-03    | Buku Tulis DQLab          | 12000 |
-+------------+---------------------------+-------+
+---
 
-✅ Penutup
+## ✅ Penutup
 
-Materi Basis Data Part 1 memberikan dasar penting dalam memahami SQL dan RDBMS. Dengan memahami perintah SELECT beserta outputnya, pengguna dapat mulai melakukan pengolahan data secara efektif dan terstruktur.
+Materi Basis Data Part 1 memberikan pemahaman dasar mengenai SQL dan RDBMS. Dengan menguasai perintah `SELECT` beserta hasil output-nya, pengguna dapat mulai melakukan pengolahan data secara terstruktur dan efisien.
+
+---
+
+## 🔗 Referensi
+
+* [https://www.mysql.com](https://www.mysql.com)
+* [https://www.postgresql.org](https://www.postgresql.org)
+* [https://www.oracle.com/database](https://www.oracle.com/database)
+* [https://learn.microsoft.com/sql](https://learn.microsoft.com/sql)

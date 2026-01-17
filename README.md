@@ -215,6 +215,7 @@ Materi Basis Data Part 1 memberikan pemahaman dasar mengenai SQL dan RDBMS. Deng
 
 ## 🔗 Referensi
 
+* [https://docs.google.com/document/d/18Dc_2P8xDXz7c1FEO37xxm_4Rxx09i49DOvnigZapaA/edit?usp=sharing]
 * [https://www.mysql.com](https://www.mysql.com)
 * [https://www.postgresql.org](https://www.postgresql.org)
 * [https://www.oracle.com/database](https://www.oracle.com/database)

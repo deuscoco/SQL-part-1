@@ -215,6 +215,7 @@ Materi Basis Data Part 1 memberikan pemahaman dasar mengenai SQL dan RDBMS. Deng
 
 ## 🔗 Referensi
 
+* [https://medium.com/@amadeusrizz/basis-data-part-1-pengenalan-sql-dan-basis-data-untuk-pemula-dbec6ee3bb99]
 * [https://docs.google.com/document/d/18Dc_2P8xDXz7c1FEO37xxm_4Rxx09i49DOvnigZapaA/edit?usp=sharing]
 * [https://www.mysql.com](https://www.mysql.com)
 * [https://www.postgresql.org](https://www.postgresql.org)
